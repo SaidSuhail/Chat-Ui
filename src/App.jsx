@@ -39,11 +39,12 @@ const ChatBot = () => {
 
     try {
       // Call your API endpoint
-      const res = await fetch("https://chatbot-xy2i.onrender.com/api/Chat", {
+      const res = await fetch("https://localhost:7293/api/Chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          body:JSON.stringify({ UserMessage: userInput}),
+          // body:JSON.stringify({ UserMessage: userInput}),
+              "UserMessage": userInput,
         },
       });
 
